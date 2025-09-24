@@ -41,3 +41,53 @@ class Queue
 			count--;
 		}
 	}
+	public void display()
+	{
+		if(rear==-1)
+		{
+			System.out.println("Queue is Empty");
+		}
+		else
+		{
+			System.out.println("Queue Elements are:");
+			for(int i=0;i<count;i++)
+			{
+				int index=(front+1)%maxSize;
+				System.out.print(QueueArray[i]+"\t");
+			}
+		}
+	}
+}
+class QueueDemo2
+{
+	public static void main(String s[])
+	{
+		Queue q1=new Queue(5);
+		q1.enQueue(12);
+		q1.enQueue(11);
+		q1.enQueue(10);
+		q1.enQueue(8);
+		q1.enQueue(7);
+		
+		q1.display();
+	 	q1.deQueue();
+	  	q1.deQueue();
+	  	q1.deQueue();
+	  	
+	  	q1.display();
+	  	
+}		
+		
+	  	
+	 }
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
